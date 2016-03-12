@@ -1,6 +1,10 @@
-<ul>
-	<li ng-repeat="post in vm.posts">
-		<b>{{ post.name }}</b><br>
-		{{ post.desc }}
-	</li>
-</ul>
+<div ng-if="vm.posts.length" class="DemoCode">
+	<h2>List of Posts.</h2>
+	<p>{{ vm.posts.length }} post(s) listed below</p>
+	<ul>
+		<li ng-repeat="post in vm.posts">
+			<b>{{ ::post.name }}</b><br>
+			{{ ::post.desc }}
+		</li>
+	</ul>
+</div>

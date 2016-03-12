@@ -8,7 +8,7 @@ class PostController{
     }
 
 	getPosts(){
-		this.API.all('post').customGET('/')
+		this.API.all('post').get('')
 			.then((response) => {
 				this.posts = response.data;
 			});
