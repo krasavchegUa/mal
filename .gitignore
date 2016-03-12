@@ -12,3 +12,5 @@ public/js
 public/css
 Apache-2.4+Nginx-1.9_vhosta.conf
 Apache-2.4+Nginx-1.9_vhostn.conf
+_ide_helper.php
+ storage/debugbar/

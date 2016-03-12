@@ -8,6 +8,7 @@ var gulp = require('gulp'),
     gulpIf = require('gulp-if'),
     concat = require('gulp-concat'),
     elixir = require('laravel-elixir'),
+    notify = require('gulp-notify'),
     config = elixir.config,
     _  = require('underscore'),
     Elixir = require('laravel-elixir');
@@ -36,7 +37,13 @@ elixir.extend('ngHtml2Js', function(src, output, options) {
             .pipe(ngHtml2Js(options))
             .pipe(concat(paths.output.name))
             .pipe(gulpIf(elixir.config.production, uglify()))
-            .pipe(gulp.dest(paths.output.baseDir));
+            .pipe(gulp.dest(paths.output.baseDir))
+			.pipe(notify({
+				title: 'Laravel Elixir',
+				subtitle: '',
+				icon: __dirname + '/../node_modules/laravel-elixir/icons/laravel.png',
+				message: 'Partials Generated!'
+			}));
     })
     .watch(paths.src.path);
 });

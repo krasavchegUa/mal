@@ -33,6 +33,7 @@ Route::group(['middleware' => ['web']], function () {
 $api->group([], function ($api) {
 
     $api->post('users/login', 'LoginController@login');
+    $api->get('post', 'PostController@get');
 
 });
 

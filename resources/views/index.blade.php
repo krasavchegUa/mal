@@ -8,7 +8,7 @@
     <link rel="stylesheet" href="{!! asset('css/app.css') !!}">
     <link href='https://fonts.googleapis.com/css?family=Lato:300,400,700' rel='stylesheet' type='text/css'>
 
-    <title>Laravel Angular Material Starter</title>
+    <title>Material Angular / Laravel</title>
 
     <!--[if lte IE 10]>
     <script type="text/javascript">document.location.href = '/unsupported-browser'</script>
@@ -17,6 +17,7 @@
 <body>
 
     <div ui-view="header"></div>
+    <post-component></post-component>
     <div ui-view="main"></div>
     <div ui-view="footer"></div>
 
